@@ -78,15 +78,39 @@ No modules.
 | [docker_container.payment_development](https://registry.terraform.io/providers/kreuzwerker/docker/2.15.0/docs/resources/container) | resource |
 | [docker_container.payment_production](https://registry.terraform.io/providers/kreuzwerker/docker/2.15.0/docs/resources/container) | resource |
 | [docker_container.payment_staging](https://registry.terraform.io/providers/kreuzwerker/docker/2.15.0/docs/resources/container) | resource |
-| [vault_generic_secret.account_development](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/data-sources/generic_secret) | data source |
-| [vault_generic_secret.account_production](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/data-sources/generic_secret) | data source |
-| [vault_generic_secret.account_staging](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/data-sources/generic_secret) | data source |
-| [vault_generic_secret.gateway_development](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/data-sources/generic_secret) | data source |
-| [vault_generic_secret.gateway_production](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/data-sources/generic_secret) | data source |
-| [vault_generic_secret.gateway_staging](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/data-sources/generic_secret) | data source |
-| [vault_generic_secret.payment_development](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/data-sources/generic_secret) | data source |
-| [vault_generic_secret.payment_production](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/data-sources/generic_secret) | data source |
-| [vault_generic_secret.payment_staging](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/data-sources/generic_secret) | data source |
+| [vault_audit.audit_dev](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/audit) | resource |
+| [vault_audit.audit_prod](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/audit) | resource |
+| [vault_audit.audit_staging](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/audit) | resource |
+| [vault_auth_backend.userpass_dev](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/auth_backend) | resource |
+| [vault_auth_backend.userpass_prod](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/auth_backend) | resource |
+| [vault_auth_backend.userpass_staging](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/auth_backend) | resource |
+| [vault_generic_endpoint.account_development](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/generic_endpoint) | resource |
+| [vault_generic_endpoint.account_production](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/generic_endpoint) | resource |
+| [vault_generic_endpoint.account_staging](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/generic_endpoint) | resource |
+| [vault_generic_endpoint.gateway_development](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/generic_endpoint) | resource |
+| [vault_generic_endpoint.gateway_production](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/generic_endpoint) | resource |
+| [vault_generic_endpoint.gateway_staging](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/generic_endpoint) | resource |
+| [vault_generic_endpoint.payment_development](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/generic_endpoint) | resource |
+| [vault_generic_endpoint.payment_production](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/generic_endpoint) | resource |
+| [vault_generic_endpoint.payment_staging](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/generic_endpoint) | resource |
+| [vault_generic_secret.account_development](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/generic_secret) | resource |
+| [vault_generic_secret.account_production](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/generic_secret) | resource |
+| [vault_generic_secret.account_staging](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/generic_secret) | resource |
+| [vault_generic_secret.gateway_development](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/generic_secret) | resource |
+| [vault_generic_secret.gateway_production](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/generic_secret) | resource |
+| [vault_generic_secret.gateway_staging](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/generic_secret) | resource |
+| [vault_generic_secret.payment_development](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/generic_secret) | resource |
+| [vault_generic_secret.payment_production](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/generic_secret) | resource |
+| [vault_generic_secret.payment_staging](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/generic_secret) | resource |
+| [vault_policy.account_development](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/policy) | resource |
+| [vault_policy.account_production](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/policy) | resource |
+| [vault_policy.account_staging](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/policy) | resource |
+| [vault_policy.gateway_development](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/policy) | resource |
+| [vault_policy.gateway_production](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/policy) | resource |
+| [vault_policy.gateway_staging](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/policy) | resource |
+| [vault_policy.payment_development](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/policy) | resource |
+| [vault_policy.payment_production](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/policy) | resource |
+| [vault_policy.payment_staging](https://registry.terraform.io/providers/hashicorp/vault/3.0.1/docs/resources/policy) | resource |
 
 ## Inputs
 
