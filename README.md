@@ -56,6 +56,12 @@ b0aa35b20a95   form3tech-oss/platformtest-account   "/go/bin/account"        4 m
 fc90241cc5bd   hashicorp/vault:1.19                 "docker-entrypoint.s…"   5 minutes ago   Up 5 minutes   0.0.0.0:8401->8200/tcp, [::]:8401->8200/tcp   vagrant-vault-staging-1
 vagrant@f3-interview:~$
 
+vagrant@f3-interview:~$ docker logs account_development
+account service initializing....
+{"data":{"db_password":"965d3c27-9e20-4d41-91c9-61e6631870e7","db_user":"account"},"metadata":{"created_time":"2025-08-11T14:44:24.987315194Z","custom_metadata":null,"deletion_time":"","destroyed":false,"version":1}}
+account service started....
+
+
 ```
 
 
