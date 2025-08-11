@@ -9,7 +9,7 @@ I've splitted the code, originally in main.tf in different config files for easy
 ## Structure
 
 - `provider.tf`: Defines Vault providers for each environment
-- `vault.tf`: Queries secrets from Vault per environment/service
+- `vault.tf`: Contains all resources related to Vault per environment
 - `containers.tf`: Deploys Docker containers 
 - `locals.tf`: Contains common settings used in the different environments
 - `variables.tf` & `secrets.tfvars`: Secrets and Vault tokens
@@ -29,6 +29,14 @@ terraform apply -var-file=secrets.tfvars -var="environment=staging"
 ## Improvements that could be done
 
 If the size of the infrastructure grows exponentially would be a good idea to split the containers .tf files into containers_(prod|dev|staging).tf for isolation of the env config files.
+
+## Observations
+
+I have modified docker-compose.yml so the new 'staging' network could be created
+
+I have also modified the terraform apply command inside the run.sh script to use the secrets.tfvars file.
+
+
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements

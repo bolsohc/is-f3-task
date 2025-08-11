@@ -28,5 +28,5 @@ popd
 echo Applying terraform script
 pushd /vagrant/tf
 terraform init -upgrade
-terraform apply -auto-approve
+terraform apply -var-file=secrets.tfvars -auto-approve
 popd

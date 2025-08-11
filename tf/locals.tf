@@ -1,14 +1,8 @@
 locals {
   environments = {
-    development = {
-      provider = vault.vault_dev
-    }
-    staging = {
-      provider = vault.vault_staging
-    }
-    production = {
-      provider = vault.vault_prod
-    }
+    development = {}
+    staging     = {}
+    production  = {}
   }
 
   services = {

@@ -5,7 +5,7 @@ resource "docker_container" "account_production" {
   env = [
     "VAULT_ADDR=http://vault-production:8200",
     "VAULT_USERNAME=account-production",
-    "VAULT_PASSWORD=123-account-production",
+    "VAULT_PASSWORD=${jsondecode(vault_generic_endpoint.account_production.data_json).password}",
     "ENVIRONMENT=production"
   ]
 
@@ -27,7 +27,7 @@ resource "docker_container" "gateway_production" {
   env = [
     "VAULT_ADDR=http://vault-production:8200",
     "VAULT_USERNAME=gateway-production",
-    "VAULT_PASSWORD=123-gateway-production",
+    "VAULT_PASSWORD=${jsondecode(vault_generic_endpoint.gateway_production.data_json).password}",
     "ENVIRONMENT=production"
   ]
 
@@ -49,7 +49,7 @@ resource "docker_container" "payment_production" {
   env = [
     "VAULT_ADDR=http://vault-production:8200",
     "VAULT_USERNAME=payment-production",
-    "VAULT_PASSWORD=123-payment-production",
+    "VAULT_PASSWORD=${jsondecode(vault_generic_endpoint.payment_production.data_json).password}",
     "ENVIRONMENT=production"
   ]
 
@@ -80,7 +80,6 @@ resource "docker_container" "frontend_production" {
   lifecycle {
     ignore_changes = all
   }
-
 }
 
 resource "docker_container" "account_development" {
@@ -90,7 +89,7 @@ resource "docker_container" "account_development" {
   env = [
     "VAULT_ADDR=http://vault-development:8200",
     "VAULT_USERNAME=account-development",
-    "VAULT_PASSWORD=123-account-development",
+    "VAULT_PASSWORD=${jsondecode(vault_generic_endpoint.account_development.data_json).password}",
     "ENVIRONMENT=development"
   ]
 
@@ -112,7 +111,7 @@ resource "docker_container" "gateway_development" {
   env = [
     "VAULT_ADDR=http://vault-development:8200",
     "VAULT_USERNAME=gateway-development",
-    "VAULT_PASSWORD=123-gateway-development",
+    "VAULT_PASSWORD=${jsondecode(vault_generic_endpoint.gateway_development.data_json).password}",
     "ENVIRONMENT=development"
   ]
 
@@ -134,7 +133,7 @@ resource "docker_container" "payment_development" {
   env = [
     "VAULT_ADDR=http://vault-development:8200",
     "VAULT_USERNAME=payment-development",
-    "VAULT_PASSWORD=123-payment-development",
+    "VAULT_PASSWORD=${jsondecode(vault_generic_endpoint.payment_development.data_json).password}",
     "ENVIRONMENT=development"
   ]
 
@@ -167,7 +166,6 @@ resource "docker_container" "frontend_development" {
   }
 }
 
-
 resource "docker_container" "account_staging" {
   image = "form3tech-oss/platformtest-account"
   name  = "account_staging"
@@ -175,7 +173,7 @@ resource "docker_container" "account_staging" {
   env = [
     "VAULT_ADDR=http://vault-staging:8200",
     "VAULT_USERNAME=account-staging",
-    "VAULT_PASSWORD=123-account-staging",
+    "VAULT_PASSWORD=${jsondecode(vault_generic_endpoint.account_staging.data_json).password}",
     "ENVIRONMENT=staging"
   ]
 
@@ -197,7 +195,7 @@ resource "docker_container" "gateway_staging" {
   env = [
     "VAULT_ADDR=http://vault-staging:8200",
     "VAULT_USERNAME=gateway-staging",
-    "VAULT_PASSWORD=123-gateway-staging",
+    "VAULT_PASSWORD=${jsondecode(vault_generic_endpoint.gateway_staging.data_json).password}",
     "ENVIRONMENT=staging"
   ]
 
@@ -219,7 +217,7 @@ resource "docker_container" "payment_staging" {
   env = [
     "VAULT_ADDR=http://vault-staging:8200",
     "VAULT_USERNAME=payment-staging",
-    "VAULT_PASSWORD=123-payment-staging",
+    "VAULT_PASSWORD=${jsondecode(vault_generic_endpoint.payment_staging.data_json).password}",
     "ENVIRONMENT=staging"
   ]
 
@@ -240,7 +238,7 @@ resource "docker_container" "frontend_staging" {
 
   ports {
     internal = 80
-    external = 4080
+    external = 4082
   }
 
   networks_advanced {
