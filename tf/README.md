@@ -28,7 +28,7 @@ terraform apply -var-file=secrets.tfvars -var="environment=staging"
 
 ## Improvements that could be done
 
-If the size of the infrastructure grows exponentially would be a good idea to split the containers .tf files into containers_<env>.tf for isolation of the env config files.
+If the size of the infrastructure grows exponentially would be a good idea to split the containers .tf files into containers_(prod|dev|staging).tf for isolation of the env config files.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
