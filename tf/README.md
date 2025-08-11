@@ -36,6 +36,8 @@ I have modified docker-compose.yml so the new 'staging' network could be created
 
 I have also modified the terraform apply command inside the run.sh script to use the secrets.tfvars file.
 
+In containers.tf I was getting an error when Terraform was trying to get VAULT_PASSWORD, by using jsondecode to parse the vault_generic_endpoint resource I was able to successfully get the required password for the vault to authenticate.
+
 
 
 <!-- BEGIN_TF_DOCS -->
